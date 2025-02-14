@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de monedas</title>
+    <link rel="shortcut icon" href="./assets/img/favicon_io (2)/favicon.ico" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <h1>Conversor de monedas</h1>
+            <div class="input-group">
+                <input type="number" id="amount" placeholder="ingrese monto en CLP" min="0">
+                <select id="currency">
+                    <option value="dolar">Dólar Estadounidense (USD)</option>
+                    <option value="euro">Euro (EUR)</option>
+                    <option value="uf">UF</option>
+                    <option value="utm">UTM </option>
+                    <option value="yen">YEN</option>
+                    <option value="ars">Dolar Argentino</option>
+                </select>
+                <button onclick="convertCurrency()">Convertir</button>
+            </div>
+            <div id="result" class="result"></div>
+            <div id="error" class="error-message"></div>
+        </div>
+        <div class="chart-container">
+            <canvas id="currencyChart"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desarrollado por <a href="https://github.com/franco-montana" target="_blank"> Franco Montaña</a> | Datos proporcionados por <a href="https://mindicador.cl/" target="_blank">mindicador.cl</a></p>
+    </footer>
+    
+    <script src="./assets/js/script.js"></script>
+    
+</body>
+</html>
